@@ -1,0 +1,155 @@
+/* Global Settings */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background: url(img/hero01.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #000;
+}
+
+/* Hero Image & Text */
+.title {
+    position: absolute;
+    top: 40%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 1.25rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+/* Side Menu */
+.menu-strip {
+    background: #fff;
+    position: fixed;
+    width: 10%;
+    height: 100vh;
+    z-index: 1;
+}
+
+.logo, .toggle-btn {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo {
+    top: 5%;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 500;
+    font-size: 1.875rem;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #000;
+}
+
+.logo a:hover {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.toggle-btn {
+    top: 10%;
+}
+
+/* Social Media Icons */
+.media {
+    position: absolute;
+    top: 46%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.media ul {
+    padding: 0;
+    text-align: center;
+}
+
+.media ul li {
+    display: inline-block;
+    margin: 1rem;
+    font-size: 1.125rem;
+    cursor: pointer;
+}
+
+.media ul li:hover {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+/* Media Queries */
+@media (max-width: 900px) {
+    .title {
+        left: 50%;
+    }
+
+    h1 {
+        letter-spacing: 1.1rem;
+    }
+
+    .menu-strip {
+        background: #fff;
+        position: fixed;
+        width: 100%;
+        height: 8vh;
+        z-index: 1;
+    }
+
+    .logo {
+        top: 50%;
+        left: 5%;
+    }
+
+    .toggle-btn {
+        top: 50%;
+        left: 95%;
+    }
+
+    .media {
+        left: 50%;
+    }
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    .media {
+        top: 55%;
+    }
+}
+
+@media (max-width: 320px) {
+    .logo {
+        top: 50%;
+        left: 10%;
+    }
+
+    .toggle-btn {
+        top: 50%;
+        left: 90%;
+    }
+}
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+    .media {
+        top: 60%;
+    }
+}
