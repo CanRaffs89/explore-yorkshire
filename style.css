@@ -111,12 +111,13 @@ h1 {
 
     .logo {
         top: 50%;
-        left: 5%;
+        left: 93%;
     }
 
     .toggle-btn {
         top: 50%;
-        left: 95%;
+        left: 5%;
+        margin-left: 10px;
     }
 
     .media {
@@ -137,12 +138,12 @@ h1 {
 @media (max-width: 320px) {
     .logo {
         top: 50%;
-        left: 10%;
+        left: 90%;
     }
 
     .toggle-btn {
         top: 50%;
-        left: 90%;
+        left: 10%;
     }
 }
 
