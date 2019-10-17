@@ -2,19 +2,21 @@
 
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
 
+* {
+    box-sizing: border-box;
+}
+
 html, body {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100vh;
-    background: url(img/hero01.jpg) no-repeat 50% 50%;
-    background-size: cover;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #000;
     overflow: hidden;
 }
 
-/* Hero Image & Text */
+/* Hero Text */
 .title {
     position: absolute;
     top: 40%;
@@ -29,6 +31,69 @@ h1 {
     letter-spacing: 1.25rem;
     font-weight: 400;
     text-align: center;
+}
+
+/* Image Slider */
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    z-index: -1;
+}
+
+.slide.current {
+    opacity: 1;
+}
+
+.slide:nth-child(3) {
+    background: url('img/hero01.jpg') no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.slide:nth-child(4) {
+    background: url('img/hero02.jpg') no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.slide:nth-child(5) {
+    background: url('img/hero03.jpg') no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.slide:nth-child(6) {
+    background: url('img/hero04.jpg') no-repeat 50% 50%;
+    background-size: cover;
+}
+
+/* Image Slider Arrows */
+.arrow-buttons button {
+    outline: none;
+    background-color: transparent;
+    border: 2px solid #000;
+    border-radius: 50%;
+    padding: 13px 15px;
+    cursor: pointer;
+}
+
+.arrow-buttons button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.arrow-buttons button#previous {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+}
+
+.arrow-buttons button#next {
+    position: absolute;
+    top: 50%;
+    right: 5%;
 }
 
 /* Side Menu */
@@ -87,7 +152,9 @@ h1 {
 
 #slide-menu ul li {
     list-style: none;
-    font-size: 20px;
+    font-size: 1.25rem;
+    font-weight: 200;
+    letter-spacing: 0.2rem;
     padding: 20px;
 }
 
@@ -158,6 +225,11 @@ h1 {
 
     .media {
         left: 50%;
+        top: 50%;
+    }
+
+    .arrow-buttons button#previous {
+        left: 5%;
     }
 }
 
@@ -167,7 +239,12 @@ h1 {
     }
 
     .media {
-        top: 55%;
+        top: 50%;
+    }
+
+    .arrow-buttons button#previous, .arrow-buttons button#next {
+        top: 47%;
+        border: none;
     }
 }
 
@@ -180,14 +257,5 @@ h1 {
     .toggle-btn {
         top: 50%;
         left: 10%;
-    }
-}
-
-@media only screen 
-  and (min-device-width: 320px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) {
-    .media {
-        top: 60%;
     }
 }
